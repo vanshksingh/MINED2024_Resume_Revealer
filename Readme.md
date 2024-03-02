@@ -1,10 +1,9 @@
-Certainly! Here's an enhanced version of the README.md file with more detailed information and a professional tone:
 
----
 
 # Resume Parser and Conversational AI
 
-![Project Logo](https://example.com/logo.png)
+<img width="1680" alt="Screenshot 2024-03-02 at 10 42 51 AM" src="https://github.com/vanshksingh/MINED2024_Resume_Revealer/assets/114809624/b8d6848b-16bd-4ee7-bdcb-cf2de1edf73e">
+
 
 ## Overview
 
@@ -49,7 +48,7 @@ The Resume Parser and Conversational AI project is a comprehensive solution desi
 1. **Run the Main Script**:
 
    ```
-   python main.py
+   python run.py
    ```
 
 2. **Follow On-Screen Prompts**:
@@ -67,6 +66,12 @@ The Resume Parser and Conversational AI project is a comprehensive solution desi
 - **`open_file_window()`**: Opens a GUI window for selecting files.
 - **`process_files(files)`**: Processes selected files and extracts text.
 - **`start_gemini_conversation(initial_input)`**: Initiates a conversational AI session.
+- **`Development Folder`**: It contains files and features under development.
+
+  
+<img width="1680" alt="Screenshot 2024-03-02 at 10 43 42 AM" src="https://github.com/vanshksingh/MINED2024_Resume_Revealer/assets/114809624/f85bc731-3202-4402-8428-d0604d53d136">
+<img width="1680" alt="Screenshot 2024-03-02 at 10 44 45 AM" src="https://github.com/vanshksingh/MINED2024_Resume_Revealer/assets/114809624/3c83516e-06a1-45a8-b7cd-390c87033643">
+
 
 ## Contributing
 
@@ -83,8 +88,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or inquiries, please contact [yourname](mailto:youremail@example.com).
+For questions or inquiries, please contact [yourname](mailto:vsvsasas@gmail.com).
 
 ---
-
-Feel free to customize this README template further to suit your project's specific needs. If you have any questions or need further assistance, please don't hesitate to ask!
