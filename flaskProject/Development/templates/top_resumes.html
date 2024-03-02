@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Resumes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <button onclick="history.back()">Back</button>
+        <img src="logo.png" alt="Logo">
+        <button>{{ username }}</button>
+    </header>
+    
+    <!-- Main content -->
+    <div class="container">
+        <div class="resume-list">
+            <h2>Top 10 Resumes</h2>
+            <ul>
+                {% for resume in resumes %}
+                    <li><a href="/resume/{{ resume.id }}">{{ resume.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <!-- Right div with chat window -->
+        <div class="chat-window">
+            <!-- Chat window content -->
+        </div>
+    </div>
+</body>
+</html>

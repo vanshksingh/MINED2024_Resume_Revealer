@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Resume Details</h1>
+    <ul>
+        <li><strong>Name:</strong> {{ resume_info['name'] }}</li>
+        <li><strong>Email:</strong> {{ resume_info['email'] }}</li>
+        <li><strong>Phone:</strong> {{ resume_info['phone'] }}</li>
+        <li><strong>Degree:</strong> {{ resume_info['degree'] }}</li>
+        <li><strong>University:</strong> {{ resume_info['university'] }}</li>
+        <li><strong>Graduation Year:</strong> {{ resume_info['graduation_year'] }}</li>
+        <li><strong>Job Role(s):</strong> {{ resume_info['job_role'] }}</li>
+        <li><strong>Job Title(s):</strong> {{ resume_info['job_title'] }}</li>
+        <li><strong>Achievements:</strong> {{ resume_info['achievements'] }}</li>
+        <li><strong>Skills:</strong> {{ resume_info['skills'] }}</li>
+        <li><strong>Certifications:</strong> {{ resume_info['certifications'] }}</li>
+        <li><strong>Projects:</strong> {{ resume_info['projects'] }}</li>
+        <li><strong>Summary:</strong> {{ resume_info['summary'] }}</li>
+        <li><strong>Rating:</strong> {{ resume_info['rating'] }}</li>
+    </ul>
+</body>
+</html>

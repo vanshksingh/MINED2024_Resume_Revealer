@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple AI ChatBot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .msg-container {
+      margin-bottom: 20px;
+    }
+    .user-msg, .bot-msg {
+      margin-bottom: 5px;
+    }
+    .user-msg {
+      color: blue;
+    }
+    .bot-msg {
+      color: green;
+    }
+    .bot-msg p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="msg-container">
+      <!-- Chat messages will be displayed here -->
+    </div>
+    <div class="user-input-div">
+      <input type="text" placeholder="Chat With Your Bot" class="user-input">
+      <button class="btn">Go</button>
+    </div>
+  </main>
+  <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+  <script type="module">
+    import { GoogleGenerativeAI } from "@google/generative-ai";
+    const API_KEY = "AIzaSyAvh9AbDKJ6E0DdOUll0f1p4qCSlerGvfs"; // Replace with your actual API key
+    const genAI = new GoogleGenerativeAI(API_KEY);
+    document.querySelector('.btn').addEventListener('click', run);
+    document.querySelector('.user-input').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        run();
+      }
+    });
+
+    async function run() {
+      // For text-only input, use the gemini-pro model
+      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+      /* Getting and showing user input */
+      let userInput = document.querySelector('.user-input').value;
+      let userMessageDiv = document.createElement("div");
+      userMessageDiv.className = "user-msg";
+      userMessageDiv.textContent = `User: ${userInput}`;
+      document.querySelector('.msg-container').appendChild(userMessageDiv);
+      /* Getting and showing user input */
+
+      const prompt = userInput;
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text = response.text();
+
+      /* Show response on screen */
+      let botMessageDiv = document.createElement("div");
+      botMessageDiv.className = "bot-msg";
+      botMessageDiv.innerHTML = text;
+      document.querySelector('.msg-container').appendChild(botMessageDiv);
+    }
+  </script>
+</body>
+</html>

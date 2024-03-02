@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+</head>
+<body>
+    <h1>Upload Files</h1>
+    <form action="/uploader" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="text_input">Text Input:</label>
+            <input type="text" id="text_input" name="text_input">
+        </div>
+        <div>
+            <label for="file_upload">Upload Files:</label>
+            <input type="file" id="file_upload" name="files[]" multiple>
+        </div>
+        <div>
+            <button type="submit">Upload</button>
+        </div>
+    </form>
+</body>
+</html>
