@@ -15,7 +15,7 @@ The Resume Parser and Conversational AI project is a comprehensive solution desi
 - **Conversational AI**: Utilizes the Google Gemini model to engage in interactive conversations with users.
 - **Database Integration**: Stores extracted resume data in a MySQL database for easy access and analysis.
 - **User-Friendly Interface**: Provides a GUI window for selecting multiple files and initiating processing tasks.
-- **AI Mode**: Offers an AI mode for advanced processing and analysis of resume data.
+- **AI Mode**: Offers an AI mode for  advanced processing and analysis of resume data.
 
 ## Requirements
 
